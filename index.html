@@ -83,7 +83,7 @@
                             <div class="hero__text">
                                 <span>For Website Developing and Mobile Application</span>
                                 <h2>Software Engineer</h2>
-                                <a href="#" class="primary-btn">About Me</a>
+                                <a href="#" class="primary-btn" onclick="downloadPDF()">About Me</a>
                             </div>
                         </div>
                     </div>
@@ -329,5 +329,26 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 </body>
-
+<script>
+    function downloadPDF() {
+      // Path to the PDF file
+      var pdfURL = 'updated alanshaju cv.pdf';
+      
+      // Create an anchor element
+      var link = document.createElement('a');
+      link.href = pdfURL;
+      
+      // Set the download attribute to force download
+      link.download = 'your_pdf_filename.pdf';
+      
+      // Append the anchor element to the document body
+      document.body.appendChild(link);
+      
+      // Trigger the click event to initiate download
+      link.click();
+      
+      // Remove the anchor element from the document body
+      document.body.removeChild(link);
+    }
+  </script>
 </html>
